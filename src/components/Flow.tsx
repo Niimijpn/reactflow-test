@@ -16,6 +16,16 @@ import ReactFlow, {
 
 import "reactflow/dist/style.css";
 
+import TextUpdaterNode from "./textUpdaterNode";
+
+const rfStyle = {
+  backgroundColor: "#f0f0f0",
+};
+
+const nodeTypes = {
+  textupdater: TextUpdaterNode,
+};
+
 export default function App({
   nodes: initNodes,
   edges: initEdges,
@@ -53,6 +63,9 @@ export default function App({
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        fitView
+        style={rfStyle}
+        nodeTypes={nodeTypes}
       >
         <Background />
         <Controls />

@@ -1,4 +1,4 @@
-import { Edge, Node, Position, ReactFlowProvider } from "reactflow";
+import { Edge, Node, Position } from "reactflow";
 
 import Flow from "@/components/Flow";
 
@@ -12,6 +12,13 @@ const initialNodes: Node[] = [
     id: "2",
     position: { x: 100, y: 100 },
     data: { label: "World" },
+  },
+  {
+    id: "3",
+    position: { x: 400, y: 100 },
+    data: { value: 123 },
+    type: "textupdater",
+    style: { color: "black" },
   },
 ];
 
